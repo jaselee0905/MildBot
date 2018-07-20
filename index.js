@@ -17,15 +17,11 @@ for (const file of commandFiles) {
 bot.on('ready', () => {
     console.log('Ready!');
 });
-/*
-bot.registry.registerGroup('random', 'Random');
-bot.registry.registerDefaults();
-bot.registry.registerCommandsIn(__dirname + "/commands");
-*/
 
 bot.on('message', message => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
 
+    else if (message.content.startsWith(prefix))
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
