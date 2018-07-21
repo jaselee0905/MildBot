@@ -14,7 +14,7 @@ module.exports = {
             if (!args.length) {
                 data.push('Here\'s a list of all my commands:\n');
                 data.push(commands.map(command => command.name).join('\n'));
-                data.push(`\nYou can send \`${prefix}help [command name]\` to get info on a specific command!\nType \`[${prefix}mhelp]\` for music commands, and controls\nType \`[${prefix}(space)\"start chatting here\"]\` to talk to MildBot or forget all this fomality and DM me if your just feeling lonely.`);
+                data.push(`\nYou can send \`${prefix}help [command name]\` to get info on a specific command!\nType \`${prefix}mhelp\` for music commands, and controls\nType \`${prefix}(space)\[start chatting here]\` to talk to MildBot or forget all this fomality and DM me if your just feeling lonely.`);
 
                 return message.channel.send(data, { split: true })
 
